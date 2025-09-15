@@ -43,13 +43,7 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background with overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-emerald-800/30 to-teal-900/20 z-10" />
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              'url("https://upload.wikimedia.org/wikipedia/commons/3/3b/Sergio_Pacheco_Centro_Uberl%C3%A2ndia.jpg")',
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat mainImage" />
 
         {/* Hero Content */}
         <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
