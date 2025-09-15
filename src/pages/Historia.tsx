@@ -130,13 +130,13 @@ const Historia = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`relative flex items-center justify-around mb-16 ${
+                  className={`relative flex items-center justify-around mb-16 max-md:!flex-col  max-md:gap-5  ${
                     isEven ? "flex-row" : "flex-row-reverse"
                   }`}
                 >
                   {/* Content */}
                   <div
-                    className={`w-5/12 ${
+                    className={`w-5/12 max-md:!px-0 max-md:w-[80vw] ${
                       isEven ? "pr-8 text-right" : "pl-8 text-left"
                     }`}
                   >
@@ -169,10 +169,14 @@ const Historia = () => {
                   </div>
 
                   {/* Timeline dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full border-4 border-white shadow-lg z-10" />
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full border-4 border-white shadow-lg z-10 max-md:-bottom-10" />
 
                   {/* Image */}
-                  <div className={`w-5/12 ${isEven ? "pl-8" : "pr-8"}`}>
+                  <div
+                    className={`w-5/12 max-md:px-0 max-md:w-[80vw] ${
+                      isEven ? "pl-8" : "pr-8"
+                    }`}
+                  >
                     <div className="rounded-2xl overflow-hidden shadow-lg">
                       <img
                         src={event.image}
