@@ -1,0 +1,12 @@
+export { default as main } from "./main.jpg";
+export { default as logo } from "./logo.png";
+export { default as history_1 } from "./history1.png";
+export { default as history_2 } from "./history2.jpeg";
+export { default as history_3 } from "./history3.png";
+export { default as history_4 } from "./history4.png";
+export { default as history_5 } from "./history5.png";
+export { default as feat_1 } from "./feat_1.png";
+export { default as feat_2 } from "./feat_2.png";
+export { default as feat_3 } from "./feat_3.png";
+export { default as feat_4 } from "./feat_4.png";
+export { default as events_1 } from "./events_1.png";
