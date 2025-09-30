@@ -234,6 +234,13 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+      <iframe
+        width="100%"
+        height="350"
+        loading="lazy"
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJpRfli61FpJQRk24syHA9zSs&key=AIzaSyC2-R5mh6rKpuT_NBxKGPKCcxDnf78j4ig"
+      />
     </div>
   );
 };
