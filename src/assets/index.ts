@@ -11,3 +11,4 @@ export { default as feat_3 } from "./feat_3.png";
 export { default as feat_4 } from "./feat_4.png";
 export { default as feat_5 } from "./feat_5.png";
 export { default as events_1 } from "./events_1.png";
+export { default as events_2 } from "./events_2.jpg";

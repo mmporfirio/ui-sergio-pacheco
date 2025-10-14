@@ -12,7 +12,7 @@ import {
   Heart,
   Filter,
 } from "lucide-react";
-import { events_1 } from "@/assets";
+import { events_1, events_2 } from "@/assets";
 
 const Eventos = () => {
   const [selectedCategory, setSelectedCategory] = useState("todos");
@@ -50,6 +50,20 @@ const Eventos = () => {
       imagem: events_1,
       organizador: "Prefeitura Municipal",
       destaque: true,
+    },
+    {
+      id: 2,
+      titulo: "Minas Urbano",
+      descricao:
+        "Vai rolar basquete 3x3 — tudo gratuito e com muita energia das ruas!",
+      categoria: "comunitario",
+      data: "2025-10-10",
+      horario: "15:00",
+      participantes: 300,
+      gratuito: true,
+      imagem: events_2,
+      organizador: "Minas Urbano",
+      destaque: false,
     },
     // {
     //   id: 2,
@@ -388,7 +402,9 @@ const Eventos = () => {
                   <div className="space-y-2 text-sm text-gray-500 mb-6">
                     <div className="flex items-center">
                       <Calendar className="h-4 w-4 mr-2 text-purple-500" />
-                      {new Date(evento.data).toLocaleDateString("pt-BR")}
+                      {evento.data.includes("-")
+                        ? new Date(evento.data).toLocaleDateString("pt-BR")
+                        : evento.data}
                     </div>
                     <div className="flex items-center">
                       <Clock className="h-4 w-4 mr-2 text-purple-500" />

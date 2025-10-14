@@ -237,6 +237,7 @@ const Home = () => {
 
       <iframe
         width="100%"
+        referrerPolicy="no-referrer-when-downgrade"
         height="350"
         loading="lazy"
         src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJpRfli61FpJQRk24syHA9zSs&key=AIzaSyC2-R5mh6rKpuT_NBxKGPKCcxDnf78j4ig"

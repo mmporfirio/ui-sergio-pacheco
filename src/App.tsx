@@ -1,5 +1,10 @@
 import { Toaster } from "react-hot-toast";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import {
+  Navigate,
+  Route,
+  BrowserRouter as Router,
+  Routes,
+} from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Atualizacoes from "./pages/Atualizacoes";
@@ -7,6 +12,7 @@ import EventoDetalhes from "./pages/EventoDetalhes";
 import Eventos from "./pages/Eventos";
 import Historia from "./pages/Historia";
 import Home from "./pages/Home";
+import Arvores from "./pages/Arvores";
 
 function App() {
   return (
@@ -17,9 +23,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/historia" element={<Historia />} />
+            <Route path="/arvore" element={<Arvores />} />
             <Route path="/atualizacoes" element={<Atualizacoes />} />
             <Route path="/eventos" element={<Eventos />} />
             <Route path="/eventos/:id" element={<EventoDetalhes />} />
+            <Route path="*" element={<Navigate to={"/"} />} />
           </Routes>
         </main>
         <Footer />
