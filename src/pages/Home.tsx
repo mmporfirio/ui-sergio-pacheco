@@ -1,8 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Calendar, History, Wrench, MapPin, Users, Leaf } from "lucide-react";
+import { useEffect } from "react";
 
 const Home = () => {
+  const [query] = useSearchParams();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const redirect = query.get("redirect");
+
+    if (!redirect) return;
+
+    navigate(redirect);
+  }, []);
+
   const features = [
     {
       icon: History,
@@ -237,6 +249,7 @@ const Home = () => {
 
       <iframe
         width="100%"
+        referrerPolicy="no-referrer-when-downgrade"
         height="350"
         loading="lazy"
         src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJpRfli61FpJQRk24syHA9zSs&key=AIzaSyC2-R5mh6rKpuT_NBxKGPKCcxDnf78j4ig"

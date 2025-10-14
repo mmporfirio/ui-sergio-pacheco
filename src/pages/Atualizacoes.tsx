@@ -9,8 +9,9 @@ import {
   Users,
   Shield,
   Wifi,
+  Users2,
 } from "lucide-react";
-import { feat_1, feat_2, feat_3, feat_4 } from "@/assets";
+import { feat_1, feat_2, feat_3, feat_4, feat_5 } from "@/assets";
 
 const Atualizacoes = () => {
   const [selectedCategory, setSelectedCategory] = useState("todas");
@@ -85,6 +86,22 @@ const Atualizacoes = () => {
         "Internet gratuita",
         "Conectividade para eventos",
         "Inclusão digital",
+      ],
+    },
+    {
+      id: 5,
+      titulo: "Revitalização quadra",
+      descricao:
+        "Revitalização de quadras com nova pintura e demarcações precisas, garantindo mais beleza e segurança para a prática esportiva.",
+      categoria: "concluidas",
+      data: "2025-10-7",
+      progresso: 100,
+      icon: Users2,
+      imagem: feat_5,
+      beneficios: [
+        "Melhora a aparência do espaço",
+        "Aumenta a durabilidade do piso",
+        "Proporciona mais conforto e segurança aos atletas",
       ],
     },
     // {
@@ -359,7 +376,7 @@ const Atualizacoes = () => {
           </div>
         </div>
       </section>
-      <div className="flex items-center my-[5vh] justify-center">
+      <div className="flex items-center my-[5dvh] justify-center">
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
